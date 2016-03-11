@@ -23,7 +23,7 @@ setup(name='ftl_installer',
           'ftl_installer',
           'ftl_installer.parser'
       ],
-      install_requires=[],
+      install_requires=['click', 'six'],
       classifiers=[
           "Development Status :: 1 - Planning",
           "Topic :: Utilities",
@@ -32,7 +32,7 @@ setup(name='ftl_installer',
           "License :: OSI Approved :: Apache Software License",
       ],
       test_suite='nose.collector',
-      tests_require=['nose', 'coverage', 'flake8'],
+      tests_require=['mock', 'nose', 'coverage', 'flake8'],
       entry_points={
           'console_scripts': [
               'ftl_installer = ftl_installer.parser.Parser:main',

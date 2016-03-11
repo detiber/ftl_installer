@@ -17,7 +17,7 @@ venv: clean __init__.py setup.py
 	@echo "#############################################"
 	virtualenv venv
 	. venv/bin/activate && pip install -r requirements.txt
-	. venv/bin/activate && pip install .
+	. venv/bin/activate && python setup.py develop
 
 clean:
 	@find . -type f -regex ".*\.py[co]$$" -delete
